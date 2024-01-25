@@ -1,0 +1,45 @@
+@SPK@include("partials/mainhead.php")
+
+</head>
+
+<body>
+
+    @SPK@include("partials/switcher.html")
+    @SPK@include("partials/loader.php")
+
+    <div class="page">
+        @SPK@include("partials/header.php")
+        @SPK@include("partials/sidebar.php")
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                @SPK@include("partials/page-header.php", {"title": "Empty", "subtitle": 'Pages'})
+
+                <!-- Start::row-1 -->
+                <div class="row">
+                    
+                </div>
+                <!--End::row-1 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+        @SPK@include("partials/headersearch_modal.php")
+        @SPK@include("partials/right-sidebar.php")
+        @SPK@include("partials/footer.php")
+
+    </div>
+
+    @SPK@include("partials/commonjs.php")
+
+    @SPK@include("partials/custom_switcherjs.php")
+
+    <!-- Custom JS -->
+    <script src="../assets/js/custom.js"></script>
+
+</body>
+
+</html>
