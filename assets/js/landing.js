@@ -221,7 +221,7 @@ function ltrFn() {
   let html = document.querySelector("html");
   document
     .querySelector("#style")
-    ?.setAttribute("href", "../assets/libs/bootstrap/css/bootstrap.min.css");
+    ?.setAttribute("href", "./assets/libs/bootstrap/css/bootstrap.min.css");
   html.setAttribute("dir", "ltr");
   document.querySelector("#switcher-ltr").checked = true;
   checkOptions();
@@ -234,7 +234,7 @@ function rtlFn() {
     .querySelector("#style")
     ?.setAttribute(
       "href",
-      "../assets/libs/bootstrap/css/bootstrap.rtl.min.css"
+      "./assets/libs/bootstrap/css/bootstrap.rtl.min.css"
     );
   checkOptions();
 }

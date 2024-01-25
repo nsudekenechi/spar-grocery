@@ -12,7 +12,7 @@
       .querySelector("#style")
       ?.setAttribute(
         "href",
-        "../assets/libs/bootstrap/css/bootstrap.rtl.min.css"
+        "./assets/libs/bootstrap/css/bootstrap.rtl.min.css"
       );
   }
   if (localStorage.getItem("sashlayout") == "horizontal") {

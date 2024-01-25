@@ -341,7 +341,7 @@
     fill: {
       type: "image",
       image: {
-        src: ["../assets/images/media/media-64.jpg"],
+        src: ["./assets/images/media/media-64.jpg"],
       },
     },
     stroke: {

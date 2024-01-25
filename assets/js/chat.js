@@ -44,7 +44,7 @@ let changeTheInfo = (element, name, img, status) => {
     document.querySelectorAll(".chatnameperson").forEach((ele) => {
         ele.innerText = name;
     })
-    let image = `../assets/images/faces/${img}.jpg`
+    let image = `./assets/images/faces/${img}.jpg`
     document.querySelectorAll(".chatimageperson").forEach((ele) => {
         ele.src = image
     })
