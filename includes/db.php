@@ -4,4 +4,4 @@ if (!$conn) {
     die();
 }
 
- echo password_hash("kenechi", PASSWORD_DEFAULT);
+//  echo password_hash("kenechi", PASSWORD_DEFAULT);
