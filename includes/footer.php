@@ -269,7 +269,7 @@
                             <div class="">
                                 <a href="chat.html">
                                     <div class="fw-semibold text-dark">Eileen Dover</div>
-                                    <p class="mb-0 fs-12 text-muted"> New product Launching...</p>
+                                    <p class="mb-0 fs-12 text-muted"> New product Launching..</p>
                                 </a>
                             </div>
                         </div>
