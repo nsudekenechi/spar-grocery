@@ -1,3 +1,12 @@
+<?php
+session_start();
+require_once("db.php");
+if (!$_SESSION["store_keeper"]) {
+    header("Location: ./index.php");
+} else {
+    $storekeeper = $_SESSION["store_keeper"];
+}
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light" data-menu-styles="light" data-toggled="close">
 
@@ -8,10 +17,10 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Sash – Bootstrap   Admin &amp; Dashboard Template </title>
+    <title> Spar Grocery Store Management System  –  </title>
     <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
-    <meta name="Author" content="Spruko Technologies Private Limited">
-	<meta name="keywords" content="admin dashboard,dashboard design htmlbootstrap admin template,html admin panel,admin dashboard html,admin panel html template,bootstrap dashboard,html admin template,html dashboard,html admin dashboard template,bootstrap dashboard template,dashboard html template,bootstrap admin panel,dashboard admin bootstrap,bootstrap admin dashboard">
+    <meta name="Author" content="">
+    <meta name="keywords" content="grocery, management system">
 
     <!-- Favicon -->
     <link rel="icon" href="./assets/images/brand-logos/favicon.ico" type="image/x-icon">
@@ -52,11 +61,14 @@
 
  <!-- Grid Css -->
 <link rel="stylesheet" href="./assets/libs/gridjs/theme/mermaid.min.css">
-
+<!-- Prism CSS -->
+<link rel="stylesheet" href="./assets/libs/prismjs/themes/prism-coy.min.css">
 </head>
 
 <body>
-
+<?php
+require_once("./includes/alert.php");
+?>
     <!-- Start Switcher -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="switcher-canvas" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header border-bottom">
@@ -1183,9 +1195,29 @@
                             </a>
                         </li>
                         <!-- End::slide -->
-
+                              <!-- Start::slide -->
+                              <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="fe fe-slack side-menu__icon"></i>
+                                <span class="side-menu__label">Category</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                                <li class="slide side-menu__label1">
+                                    <a href="javascript:void(0)">Apps</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="addcategory.php" class="side-menu__item">Add Category</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="viewcategory.php" class="side-menu__item">View Category</a>
+                                </li>
+                             
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
                         <!-- Start::slide__category -->
-                        <li class="slide__category"><span class="category-name">Ui Kit</span></li>
+                        <!-- <li class="slide__category"><span class="category-name">Ui Kit</span></li> -->
                         <!-- End::slide__category -->
 
                         <!-- Start::slide -->

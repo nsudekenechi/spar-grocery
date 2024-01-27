@@ -2,6 +2,7 @@
 <?php
 require_once("./includes/header.php");
 ?>
+
         <!-- Start::app-content -->
         <div class="main-content app-content">
             <div class="container-fluid">
@@ -1251,7 +1252,8 @@ require_once("./includes/header.php");
             </div>
         </div>
         <!-- End::app-content -->
-
+        
         <?php
         require_once("./includes/footer.php");
         ?>
+    
