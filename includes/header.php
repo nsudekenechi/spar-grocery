@@ -63,6 +63,18 @@ if (!$_SESSION["store_keeper"]) {
 <link rel="stylesheet" href="./assets/libs/gridjs/theme/mermaid.min.css">
 <!-- Prism CSS -->
 <link rel="stylesheet" href="./assets/libs/prismjs/themes/prism-coy.min.css">
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css">
+<link rel="stylesheet" href="./assets/libs/quill/quill.snow.css">
+<link rel="stylesheet" href="./assets/libs/quill/quill.bubble.css">
+
+<!-- Filepond CSS -->
+<link rel="stylesheet" href="./assets/libs/filepond/filepond.min.css">
+<link rel="stylesheet" href="./assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css">
+<link rel="stylesheet" href="./assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css">
+
+<!-- Date & Time Picker CSS -->
+<link rel="stylesheet" href="./assets/libs/flatpickr/flatpickr.min.css">
 </head>
 
 <body>
@@ -1232,6 +1244,24 @@ require_once("./includes/alert.php");
                                 </li>
                                 <li class="slide">
                                     <a href="viewbrand.php" class="side-menu__item">View Brand</a>
+                                </li>
+                             
+                            </ul>
+                        </li>
+
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="fe fe-slack side-menu__icon"></i>
+                                <span class="side-menu__label">Brand</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                               
+                                <li class="slide">
+                                    <a href="addproducts.php" class="side-menu__item">Add Products</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="viewproducts.php" class="side-menu__item">View Brand</a>
                                 </li>
                              
                             </ul>
