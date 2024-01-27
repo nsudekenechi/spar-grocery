@@ -58,7 +58,7 @@ require_once("./includes/header.php");
                                                 </td>
                                                 <td>
                                                     <div class="hstack gap-2 fs-15">
-                                                        <a href="addcategory.php?edit=<?= $row["id"]; ?>"
+                                                        <a href="addbrand.php?edit=<?= $row["id"]; ?>"
                                                             class="btn btn-icon btn-sm btn-info-light"><i
                                                                 class="ri-edit-line"></i></a>
                                                         <a href="javascript:void(0);"
@@ -117,7 +117,7 @@ require_once("./includes/footer.php");
     let tbody =document.querySelector("tbody");
     deleteIcons.forEach((deleteIcon, index) => {
         deleteIcon.onclick = async() => {
-            let req =await fetch(`./handlers/delete.php?category=${deleteIcon.dataset.id}`);
+            let req =await fetch(`./handlers/delete.php?brand=${deleteIcon.dataset.id}`);
             let res =await req.text();
             if(res=="success"){
                 productLists[index].remove()
