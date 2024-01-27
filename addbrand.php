@@ -9,13 +9,13 @@ if (!isset($_GET["edit"])) {
 
             <!-- PAGE-HEADER -->
             <div class="page-header">
-                <h1 class="page-title my-auto">Add Category</h1>
+                <h1 class="page-title my-auto">Add Brand</h1>
                 <div>
                     <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item">
                             <a href="javascript:void(0)">Dashboard</a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Add Category</li>
+                        <li class="breadcrumb-item active" aria-current="page">Add Brand</li>
                     </ol>
                 </div>
             </div>
@@ -35,10 +35,10 @@ if (!isset($_GET["edit"])) {
                                                 <div class="card-body p-0">
                                                     <div class="row gy-3">
                                                         <div class="col-xl-12">
-                                                            <label for="product-name-add" class="form-label">Category
+                                                            <label for="product-name-add" class="form-label">Brand
                                                                 Name</label>
                                                             <input type="text" class="form-control" id="product-name-add"
-                                                                placeholder="Enter Category Name" name="name">
+                                                                placeholder="Enter Brand Name" name="name">
 
                                                         </div>
 
@@ -50,7 +50,7 @@ if (!isset($_GET["edit"])) {
                                     </div>
                                 </div>
                                 <div class="px-4 py-3 border-top border-block-start-dashed d-sm-flex justify-content-end">
-                                    <button name="create_category" class="btn btn-primary-light m-1">Create Category<i
+                                    <button name="create_brand" class="btn btn-primary-light m-1">Create Brand<i
                                             class="bi bi-plus-lg ms-2"></i></button>
 
                                 </div>

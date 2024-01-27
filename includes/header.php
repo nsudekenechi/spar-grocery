@@ -1215,6 +1215,27 @@ require_once("./includes/alert.php");
                              
                             </ul>
                         </li>
+
+                        
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="fe fe-slack side-menu__icon"></i>
+                                <span class="side-menu__label">Brand</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                                <li class="slide side-menu__label1">
+                                    <a href="javascript:void(0)">Apps</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="addbrand.php" class="side-menu__item">Add Brand</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="viewbrand.php" class="side-menu__item">View Brand</a>
+                                </li>
+                             
+                            </ul>
+                        </li>
                         <!-- End::slide -->
                         <!-- Start::slide__category -->
                         <!-- <li class="slide__category"><span class="category-name">Ui Kit</span></li> -->
