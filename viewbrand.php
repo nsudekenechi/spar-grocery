@@ -6,13 +6,13 @@ require_once("./includes/header.php");
 
         <!-- PAGE-HEADER -->
         <div class="page-header">
-            <h1 class="page-title my-auto">View Category</h1>
+            <h1 class="page-title my-auto">View Brand</h1>
             <div>
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item">
                         <a href="javascript:void(0)">Dashboard</a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">View Category</li>
+                    <li class="breadcrumb-item active" aria-current="page">View Brand</li>
                 </ol>
             </div>
         </div>
@@ -25,7 +25,7 @@ require_once("./includes/header.php");
                 <div class="card custom-card">
                     <div class="card-header">
                         <div class="card-title">
-                            Categories List
+                            Brands List
                         </div>
                     </div>
                     <div class="card-body">
