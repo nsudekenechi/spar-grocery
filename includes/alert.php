@@ -53,6 +53,17 @@ if (isset($_GET["add"])) {
             </script>
             <?php
             break;
+            case "if":
+                ?>
+                <script>
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Image Failed',
+                        text: 'Image failed to upload',
+                    })
+                </script>
+                <?php
+                break;
 
 
     }

@@ -52,8 +52,8 @@
 
     // for product images upload
     const MultipleElement1 = document.querySelector('.product-Images');
-    FilePond.create(MultipleElement1,);
-
+    // FilePond.create(MultipleElement1,);
+    
     // for documents upload
     const MultipleElement = document.querySelector('.product-documents');
     FilePond.create(MultipleElement,);

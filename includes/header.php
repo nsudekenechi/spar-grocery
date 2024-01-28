@@ -63,6 +63,11 @@ if (!$_SESSION["store_keeper"]) {
 <link rel="stylesheet" href="./assets/libs/gridjs/theme/mermaid.min.css">
 <!-- Prism CSS -->
 <link rel="stylesheet" href="./assets/libs/prismjs/themes/prism-coy.min.css">
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="./assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="./assets/libs/@simonwep/pickr/themes/nano.min.css">
+
+  
     <!-- Choices Css -->
     <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css">
 <link rel="stylesheet" href="./assets/libs/quill/quill.snow.css">
@@ -1252,7 +1257,7 @@ require_once("./includes/alert.php");
                         <li class="slide has-sub">
                             <a href="javascript:void(0);" class="side-menu__item">
                                 <i class="fe fe-slack side-menu__icon"></i>
-                                <span class="side-menu__label">Brand</span>
+                                <span class="side-menu__label">Products</span>
                                 <i class="fe fe-chevron-right side-menu__angle"></i>
                             </a>
                             <ul class="slide-menu child1">

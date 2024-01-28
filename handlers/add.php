@@ -40,4 +40,26 @@ if (isset($_POST["create_brand"])) {
 
 }
 
+// Adding product
+if (isset($_POST["add_product"])) {
+    extract($_POST);
+    extract($_FILES);
+
+    $extension = pathinfo($_FILES["images"]["name"])["extension"];
+    $targetFolder = "../assets/images/products/" . strtolower(str_replace(" ", "", $name)) . ".$extension";
+    $movedFile = move_uploaded_file($_FILES["images"]["tmp_name"], $targetFolder);
+    if ($movedFile) {
+        $query = "INSERT INTO `product`(`name`, `category`,`brand`, `description`, `features`, `actual_price`, `dealer_price`, `discount`, `type`, `weight`, `image`, `published_date`, `expiry_date`, `availability`) VALUES ('$name', '$category', '$brand','$description','$features','$actualPrice','$dealerPrice','$discount','$type','$weight','$images','$publishDate','$expiryDate','$availability')";
+        $result = mysqli_query($conn, $query);
+        if ($result) {
+            header("Location: ../addproducts.php?add=s");
+        } else {
+            header("Location: ../addproducts.php?add=f");
+        }
+    } else {
+        header("Location: ../addproducts.php?add=if");
+    }
+
+}
+
 ?>
