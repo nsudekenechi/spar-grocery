@@ -37,4 +37,30 @@ if (isset($_POST["edit_brand"])) {
     }
 
 }
+
+if (isset($_POST["edit_product"])) {
+    extract($_POST);
+    $query = "SELECT * FROM product WHERE name = '$name' AND id!='$id'";
+    $res = mysqli_query($conn,$query);
+    if(mysqli_num_rows($res) > 0){
+        header("Location: ../viewproducts.php?edit=d");
+        return;
+    }
+    if($_FILES["images"]["name"]){
+        unlink("../assets/images/products/".$image);
+        $extension = pathinfo($_FILES["images"]["name"])["extension"];
+        $image = strtolower(str_replace(" ", "", $name)) . ".$extension";
+        $targetFolder = "../assets/images/products/" .$image ;
+        $movedFile = move_uploaded_file($_FILES["images"]["tmp_name"], $targetFolder);
+    }
+ 
+    $query = "UPDATE `product` SET `name`='$name',`category`='$category',`brand`='$brand',`description`='$description',`features`='$features',`actual_price`='$actualPrice',`dealer_price`='$dealerPrice',`discount`='$discount',`type`='$type',`weight`='$weight',`image`='$image',`published_date`='$publishDate',`expiry_date`='$expiryDate',`availability`='$availability' WHERE id='$id' ";
+    $res = mysqli_query($conn, $query);
+    if ($res) {
+        header("Location: ../viewproducts.php?edit=s");
+    }else{
+        header("Location: ../viewproducts.php?edit=f");
+
+    }
+}
 ?>

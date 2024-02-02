@@ -60,12 +60,9 @@ if (!$_SESSION["store_keeper"]) {
 <link rel="stylesheet" href="./assets/libs/swiper/swiper-bundle.min.css">
 
  <!-- Grid Css -->
-<link rel="stylesheet" href="./assets/libs/gridjs/theme/mermaid.min.css">
+<!-- <link rel="stylesheet" href="./assets/libs/gridjs/theme/mermaid.min.css"> -->
 <!-- Prism CSS -->
 <link rel="stylesheet" href="./assets/libs/prismjs/themes/prism-coy.min.css">
-    <!-- Color Picker Css -->
-    <link rel="stylesheet" href="./assets/libs/flatpickr/flatpickr.min.css">
-    <link rel="stylesheet" href="./assets/libs/@simonwep/pickr/themes/nano.min.css">
 
   
     <!-- Choices Css -->
@@ -73,13 +70,8 @@ if (!$_SESSION["store_keeper"]) {
 <link rel="stylesheet" href="./assets/libs/quill/quill.snow.css">
 <link rel="stylesheet" href="./assets/libs/quill/quill.bubble.css">
 
-<!-- Filepond CSS -->
-<link rel="stylesheet" href="./assets/libs/filepond/filepond.min.css">
-<link rel="stylesheet" href="./assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css">
-<link rel="stylesheet" href="./assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css">
 
-<!-- Date & Time Picker CSS -->
-<link rel="stylesheet" href="./assets/libs/flatpickr/flatpickr.min.css">
+
 </head>
 
 <body>
@@ -1266,11 +1258,13 @@ require_once("./includes/alert.php");
                                     <a href="addproducts.php" class="side-menu__item">Add Products</a>
                                 </li>
                                 <li class="slide">
-                                    <a href="viewproducts.php" class="side-menu__item">View Brand</a>
+                                    <a href="viewproducts.php" class="side-menu__item">View Products</a>
                                 </li>
                              
                             </ul>
                         </li>
+
+                        
                         <!-- End::slide -->
                         <!-- Start::slide__category -->
                         <!-- <li class="slide__category"><span class="category-name">Ui Kit</span></li> -->

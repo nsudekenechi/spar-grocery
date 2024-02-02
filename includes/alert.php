@@ -36,8 +36,8 @@ if (isset($_GET["add"])) {
             <script>
                 Swal.fire({
                     icon: 'error',
-                    title: 'Edit Failed',
-                    text: 'Item failed to create',
+                    title: 'Added Failed',
+                    text: 'Item failed to add',
                 })
             </script>
             <?php
@@ -47,7 +47,7 @@ if (isset($_GET["add"])) {
             <script>
                 Swal.fire({
                     icon: 'error',
-                    title: 'Edit Failed',
+                    title: 'Added Failed',
                     text: 'Item already exists',
                 })
             </script>
@@ -88,7 +88,7 @@ if (isset($_GET["edit"])) {
                 Swal.fire({
                     icon: 'error',
                     title: 'Edit Failed',
-                    text: 'Item failed to create',
+                    text: 'Item failed to edit',
                 })
             </script>
             <?php
