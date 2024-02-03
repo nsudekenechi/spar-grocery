@@ -104,7 +104,71 @@ if (!$_SESSION["store_keeper"]) {
             <!-- Start::main-header-container -->
             <div class="main-header-container container-fluid">
 
-                
+                <!-- Start::header-content-left -->
+                <div class="header-content-left">
+
+
+
+                    <!-- Start::header-element -->
+                    <div class="main-header-center  d-none d-lg-block header-link">
+
+
+                        <div id="headersearch" class="header-search">
+                            <div class="p-3">
+                                <div class="">
+                                    <p class="fw-semibold text-muted mb-2 fs-13">Recent Searches</p>
+                                    <div class="ps-0">
+                                        <a href="javascript:void(0)" class="search-tags"><i
+                                                class="fe fe-search me-2"></i>People<span></span></a>
+                                        <a href="javascript:void(0)" class="search-tags"><i
+                                                class="fe fe-search me-2"></i>Pages<span></span></a>
+                                        <a href="javascript:void(0)" class="search-tags"><i
+                                                class="fe fe-search me-2"></i>Articles<span></span></a>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <p class="fw-semibold text-muted mb-3 fs-13">Apps and pages</p>
+                                    <ul class="ps-0">
+                                        <li class="p-1 d-flex align-items-center text-muted mb-3 search-app">
+                                            <a class="d-inline-flex align-items-center" href="full-calendar.html"><i
+                                                    class="fe fe-calendar me-2 fs-14 bg-primary-transparent p-2 rounded-circle"></i><span>Calendar</span></a>
+                                        </li>
+                                        <li class="p-1 d-flex align-items-center text-muted mb-3 search-app">
+                                            <a class="d-inline-flex align-items-center" href="mail.html"><i
+                                                    class="fe fe-mail me-2 fs-14 bg-primary-transparent p-2 rounded-circle"></i><span>Mail</span></a>
+                                        </li>
+                                        <li class="p-1 d-flex align-items-center text-muted mb-3 search-app">
+                                            <a class="d-inline-flex align-items-center" href="buttons.html"><i
+                                                    class="fe fe-globe me-2 fs-14 bg-primary-transparent p-2 rounded-circle"></i><span>Buttons</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mt-3">
+                                    <p class="fw-semibold text-muted mb-2 fs-13">Links</p>
+                                    <ul class="ps-0 list-unstyled mb-0">
+                                        <li class="p-1 align-items-center text-muted mb-1 search-app">
+                                            <a href="javascript:void(0)"
+                                                class="text-primary"><u>http://spruko/spruko.com</u></a>
+                                        </li>
+                                        <li class="p-1 align-items-center text-muted mb-0 pb-0 search-app">
+                                            <a href="javascript:void(0)"
+                                                class="text-primary"><u>http://spruko/spruko.com</u></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="py-3 border-top px-0">
+                                <div class="text-center">
+                                    <a href="javascript:void(0)"
+                                        class="text-primary text-decoration-underline fs-15">View all</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-left -->
 
                 <!-- Start::header-content-right -->
                 <div class="header-content-right">
@@ -161,8 +225,9 @@ if (!$_SESSION["store_keeper"]) {
                                     if ($day <= 3 && !$row['isNotified']) {
                                         $msg = $day > 0 ? $row['name'] . " will expire in $day days" : $row['name'] . " have expired";
                                         ?>
-                                    <a href="productDetails.php?id=<?=$row['id'];?>">
+             
                                     <li class="dropdown-item">
+                                    <a href="productDetails.php?id=<?=$row['id'];?>">
                                             <div class="d-flex align-items-start">
                                                 <div class="pe-2">
                                                     <?php
@@ -194,8 +259,9 @@ if (!$_SESSION["store_keeper"]) {
                                                     </div>
                                                 </div>
                                             </div>
+                                            </a>
+
                                         </li>
-                                    </a>
                                         <?php
                                     }
 
@@ -365,23 +431,46 @@ if (!$_SESSION["store_keeper"]) {
         <script>
             const lists =document.querySelectorAll(".dropdown-item");
             const removeAll =document.querySelector(".removeAll");
+
+            function noNotifications(){
+                if(document.querySelectorAll("li.dropdown-item").length == 0){
+                            document.querySelector("#header-notification-scroll").innerHTML = `<div class="p-5 empty-item1 ">
+                                <div class="text-center">
+                                    <span class="avatar avatar-xl avatar-rounded bg-secondary-transparent">
+                                        <i class="ri-notification-off-line fs-2"></i>
+                                    </span>
+                                    <h6 class="fw-semibold mt-3">No New Notifications</h6>
+                                </div>
+                            </div>`
+                            document.querySelector("#notification-icon-badge").style.display = "none";
+
+                    }
+
+            }
             lists.forEach(list=>{
                 let close =  list.querySelector(".dropdown-item-close1")
           close.onclick = async ()=>{
+           
                         let req =await fetch(`./handlers/edit.php?edit_notified=${close.dataset.id}`);
                         let res =await req.text();
                        if(res){
                         list.remove();
-                       }
+                        noNotifications();
+
+                    }
                 }
             })
             removeAll.onclick = async()=>{
+             
                 let req =await fetch("./handlers/edit.php?edit_notifiedAll");
                 let res = await req.text();
                 if(res){
                     lists.forEach(list=>{
                         list.remove();
                     })
+                    noNotifications();
+
+              
                 }
             }
         </script>

@@ -9,7 +9,7 @@ if (mysqli_num_rows($res) > 0) {
     header("Location: ./viewproducts.php");
 }
 
-$dateDiff = date_diff(date_create("2024-02-03"), date_create("2024-03-05"));
+$dateDiff =  date_diff(date_create(date("Y-m-d")), date_create($row['expiry_date']));
 $days = $dateDiff->days;
 $months = $dateDiff ->m;
 $years = $dateDiff ->y;
@@ -79,9 +79,9 @@ if($days <= 30){
                                                                         </span>
                                                                     </span></h3>
                                                             </div>
-                                                            <span class="rounded-1 fs-11 badge bg-danger-transparent">
+                                                            <!-- <span class="rounded-1 fs-11 badge bg-danger-transparent">
                                                                 <?= $row['discount']; ?>% Off
-                                                            </span>
+                                                            </span> -->
                                                         </div>
                                                     </div>
                                                     <div class="mb-4">
