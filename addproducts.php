@@ -175,7 +175,7 @@ if (!isset($_GET["edit"])) {
 
 
                                 <div class="col-xl-6">
-                                <label for="publish-date" class="form-label">Publish
+                                <label for="publish-date" class="form-label">Manufacturing
                                 Date</label>
                                 <input type="text" class="form-control" id="publish-date"
                                 placeholder="Choose date" name="publishDate">
@@ -365,13 +365,7 @@ if (!isset($_GET["edit"])) {
                                 rows="2" style="resize:none" name="description" ><?= $row['description']; ?> </textarea>
 
                                 </div>
-                                <div class="col-xl-12 mb-4">
-                                <label class="form-label">Product Features</label>
-                                <textarea class="form-control" id="product-features"
-                                style="height: 200px;" name="features" > 
-                                <?= $row['features']; ?>
-                                </textarea>
-                                </div>
+                            
                                 </div>
                                 </div>
                                 </div>
@@ -380,26 +374,21 @@ if (!isset($_GET["edit"])) {
                                 <div class="card custom-card shadow-none mb-0 border-0">
                                 <div class="card-body p-0">
                                 <div class="row gy-4">
-                                <div class="col-xl-4">
+                                <div class="col-xl-6">
                                 <label for="product-actual-price" class="form-label">Actual
                                 Price</label>
                                 <input type="number" class="form-control"
                                 id="product-actual-price" placeholder="Actual Price"
                                 inputmode="numeric" name="actualPrice" value="<?= $row['actual_price']; ?>">
                                 </div>
-                                <div class="col-xl-4">
+                                <div class="col-xl-6">
                                 <label for="product-dealer-price" class="form-label">Dealer
                                 Price</label>
                                 <input type="text" class="form-control"
                                 id="product-dealer-price" placeholder="Dealer Price"
                                 name="dealerPrice" value="<?= $row['dealer_price']; ?>">
                                 </div>
-                                <div class="col-xl-4">
-                                <label for="product-discount"
-                                class="form-label">Discount</label>
-                                <input type="number" class="form-control" id="product-discount"
-                                placeholder="Discount in %" name="discount" value="<?= $row['discount']; ?>">
-                                </div>
+                                
                                 <div class="col-xl-6">
                                 <label for="product-type" class="form-label">Product
                                 Type</label>
@@ -412,7 +401,7 @@ if (!isset($_GET["edit"])) {
                                 <input type="text" class="form-control" id="product-discount1"
                                 placeholder="Weight (Kg)" name="weight" value="<?= $row['weight']; ?>">
                                 </div>
-                                <div class="col-xl-12 product-documents-container">
+                                <div class="col-xl-6 product-documents-container">
                                 <p class="fw-semibold mb-2 fs-14">Product Images :</p>
                                 <input type="file" class="product-Images" name="images"
                                 id="imageFile">
@@ -420,12 +409,17 @@ if (!isset($_GET["edit"])) {
                                 <input name="image" type="text" value="<?= $row['image']; ?>" hidden>
                                 </div>
 
-
                                 <div class="col-xl-6">
-                                <label for="publish-date" class="form-label">Publish
+                                <label for="product-discount"
+                                class="form-label">Quantity</label>
+                                <input type="number" class="form-control" id="product-discount"
+                                placeholder="Discount in %" name="quantity" value="<?= $row['quantity']; ?>">
+                                </div>
+                                <div class="col-xl-6">
+                                <label for="publish-date" class="form-label">Manufacturing
                                 Date</label>
                                 <input type="text" class="form-control" id="publish-date"
-                                placeholder="Choose date" name="publishDate" value="<?= $row['expiry_date']; ?>">
+                                placeholder="Choose date" name="manufacturingDate" value="<?= $row['manufacturing_date']; ?>">
                                 </div>
 
                                 <div class="col-xl-6">
