@@ -9,17 +9,18 @@ if (mysqli_num_rows($res) > 0) {
     header("Location: ./viewproducts.php");
 }
 
-$dateDiff =  date_diff(date_create(date("Y-m-d")), date_create($row['expiry_date']));
+$dateDiff = date_diff(date_create(date("Y-m-d")), date_create($row['expiry_date']));
 $days = $dateDiff->days;
-$months = $dateDiff ->m;
-$years = $dateDiff ->y;
+$months = $dateDiff->m;
+$years = $dateDiff->y;
 $dateMsg = "";
-if($days <= 30){
-    $dateMsg = $days < 2 ? "$days days": "$days days";
-}else if($months <= 12){
-    $dateMsg =  $months < 2 ? "$months month": "$months months";
-}else{
-    $dateMsg = $years < 2 ? "$years year": "$years years";;
+if ($days <= 30) {
+    $dateMsg = $days < 2 ? "$days day" : "$days days";
+} else if ($months <= 12) {
+    $dateMsg = $months < 2 ? "$months month" : "$months months";
+} else {
+    $dateMsg = $years < 2 ? "$years year" : "$years years";
+    ;
 }
 ?>
 <!-- Start::app-content -->
@@ -172,12 +173,14 @@ if($days <= 30){
                                                 <div class="d-flex mt-2">
                                                     <div class="">
                                                         <h6>Quantity</h6>
-                                                        <h5 class="mb-0 fw-semibold"><?=$row['quantity'];?></h5>
+                                                        <h5 class="mb-0 fw-semibold">
+                                                            <?= $row['quantity']; ?>
+                                                        </h5>
                                                     </div>
                                                     <div class="ms-auto">
                                                         <div class="">
                                                             <button type="button" class="btn btn-primary">
-                                                                Expires in <?=$dateMsg; ?>
+                                                                <?= $days > 0 ? "Expires in $dateMsg" : "Expired on ".date_format(date_create($row['expiry_date']),"d F Y");?>
                                                             </button>
                                                         </div>
                                                     </div>

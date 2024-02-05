@@ -61,12 +61,10 @@ if (!$_SESSION["store_keeper"]) {
     <link rel="stylesheet" href="./assets/libs/swiper/swiper-bundle.min.css">
 
     <!-- Grid Css -->
-    <!-- <link rel="stylesheet" href="./assets/libs/gridjs/theme/mermaid.min.css"> -->
+    <link rel="stylesheet" href="./assets/libs/gridjs/theme/mermaid.min.css">
     <!-- Prism CSS -->
     <link rel="stylesheet" href="./assets/libs/prismjs/themes/prism-coy.min.css">
-
-
-    <!-- Choices Css -->
+<!-- Choices Css -->
     <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css">
     <link rel="stylesheet" href="./assets/libs/quill/quill.snow.css">
     <link rel="stylesheet" href="./assets/libs/quill/quill.bubble.css">
@@ -223,7 +221,7 @@ if (!$_SESSION["store_keeper"]) {
                                 while ($row = mysqli_fetch_assoc($res)) {
                                     $day = date_diff(date_create(date("Y-m-d")), date_create($row['expiry_date']))->days;
                                     if ($day <= 3 && !$row['isNotified']) {
-                                        $msg = $day > 0 ? $row['name'] . " will expire in $day days" : $row['name'] . " have expired";
+                                        $msg = $day > 0 ? $row['name'] . " will expire in $day day" : $row['name'] . " have expired";
                                         ?>
              
                                     <li class="dropdown-item">

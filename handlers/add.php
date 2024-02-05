@@ -56,7 +56,7 @@ if (isset($_POST["add_product"])) {
     $movedFile = move_uploaded_file($_FILES["images"]["tmp_name"], $targetFolder);
     // $publishDate = date
     if ($movedFile) {
-        $query = "INSERT INTO `product`(`name`, `category`,`brand`, `description`, `features`, `actual_price`, `dealer_price`, `quantity`, `type`, `weight`, `image`, `manufacturing_date`, `expiry_date`, `availability`) VALUES ('$name', '$category', '$brand','$description','$features','$actualPrice','$dealerPrice','$quantity','$type','$weight','$imageName','$manufacturingDate','$expiryDate','$availability')";
+        $query = "INSERT INTO `product`(`name`, `category`,`brand`, `description`, `actual_price`, `dealer_price`, `quantity`, `type`, `weight`, `image`, `manufacturing_date`, `expiry_date`, `availability`) VALUES ('$name', '$category', '$brand','$description','$actualPrice','$dealerPrice','$quantity','$type','$weight','$imageName','$manufacturingDate','$expiryDate','$availability')";
         $result = mysqli_query($conn, $query);
         if ($result) {
             header("Location: ../addproducts.php?add=s");
